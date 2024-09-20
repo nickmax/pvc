@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+  }
+body {
+  font-family: sans-serif;
+}
+
+:root {
+  --background-gradient-top: #ff3347;
+  --background-gradient-bottom: #d4dbd9;
+  --background-search-container: #f6f6f6;
+  --background-user-list: white;
+  --background-user-profile: #ededed;
+  --background-search-chat: white;
+  --background-chat-container: #e7e7e7;
+
+  --border-user-list: #eee;
+  --border-section: #eee;
+
+  --text-user-list-name: #222;
+  --text-user-list-preview: #666;
+  --text-chat-heading: #333;
+  --text-search-chat: #111;
+  --text-search-chat-placeholder: #333;
+}
+
+.dark {
+  --background-gradient-top: #090e11;
+  --background-gradient-bottom: #090e11;
+  --background-search-container: #131c21;
+  --background-user-list: #131c21;
+  --background-user-profile: #2a2f32;
+  --background-search-chat: #323739;
+  --background-chat-container: #262d31;
+
+  --border-user-list: #242d32;
+  --border-section: #3a4144;
+
+  --text-user-list-name: #ddd;
+  --text-user-list-preview: #999;
+  --text-chat-heading: #ccc;
+  --text-search-chat: #eee;
+  --text-search-chat-placeholder: #ccc;
+}
+
+.container {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    var(--background-gradient-top),
+    var(--background-gradient-top) 20%,
+    var(--background-gradient-bottom) 20%,
+    var(--background-gradient-bottom)
+  );
+  padding-top: 5vh;
+}
+
+main {
+  height: 90vh;
+  background-color: var(--background-user-list);
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px 3px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: minmax(350px, 33%) 1fr;
+  max-width: 1200px;
+}
+
+.padding {
+  padding: 0.5rem 0.75rem;
+}
+
+section {
+  border: 1px solid var(--border-section);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-user-profile);
+}
+
+nav img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+}
+
+menu button {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  margin-left: 0.8rem;
+  color: #999;
+}
+
+.search-container {
+  background-color: var(--background-search-container);
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  background: var(--background-search-chat, white);
+  border-radius: 999px;
+}
+
+.input-container span {
+  color: #888;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+  width: 100%;
+  margin-left: 1rem;
+  background: inherit;
+  color: var(--text-search-chat);
+}
+
+input::placeholder {
+  color: var(--text-search-chat-placeholder);
+}
+
+ul {
+  list-style: none;
+}
+
+.user__list li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  background-color: var(--background-user-list);
+  border-top: 1px solid var(--border-user-list, #eee);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-user-list-name);
+}
+
+.name time {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.preview {
+  color: var(--text-user-list-preview);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-chat-container, #797979);
+}
+
+.chat-container img {
+  border-radius: 30px;
+  height: 15rem;
+  width: 15rem;
+  margin-top: 1.5rem;
+}
+
+.chat-container h2 {
+  font-size: 1.5rem;
+  color: var(--text-chat-heading, #333);
+  font-weight: 200;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container p {
+  color: #888;
+  max-width: 400px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.material-icons {
+  font-size: 1em;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.more_vert {
+  margin-left: calc(0.8rem - 8px);
+  font-size: 1.5rem;
+}
+
+.material-icons.done_all {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.material-icons.done_all.received_and_read {
+  color: blue;
+}
+
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  color: var(--text-button-toggle, #fff);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
