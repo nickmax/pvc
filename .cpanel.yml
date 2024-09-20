@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/khdinnag/public_html 
-  # Change to your username
     - /bin/cp -R * $DEPLOYPATH
