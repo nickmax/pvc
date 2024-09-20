@@ -1824,7 +1824,7 @@ blockquote::before {
 
 .slide-track {
   display: flex;
-  animation: slide 200s linear infinite; /* Animation properties */
+  animation: slide 20s linear infinite; /* Animation properties */
 }
 
 .slide {
