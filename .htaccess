@@ -53,3 +53,4 @@ AddDefaultCharset UTF-8
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
 DirectoryIndex index.html 
+Options -Indexes
